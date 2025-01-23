@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning Invoice Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lightning Invoice Manager</h1>
+        
+        <div class="card">
+            <h2>Create Invoice</h2>
+            <form id="createInvoiceForm">
+                <div class="form-group">
+                    <label for="amount">Amount (sats)</label>
+                    <input type="number" id="amount" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="receiverName">Receiver's Name</label>
+                    <input type="text" id="receiverName" required placeholder="Enter receiver's name">
+                </div>
+                <button type="submit">Create Invoice</button>
+            </form>
+        </div>
+
+        <div class="card" id="invoiceDetails" style="display: none;">
+            <h2>Invoice Details</h2>
+            <div id="qrcode"></div>
+            <div class="invoice-info">
+                <p class="label">Payment Request:</p>
+                <div class="payment-request-container">
+                    <p id="paymentRequest" class="payment-request"></p>
+                    <button id="copyButton" class="icon-button">
+                        📋 Copy
+                    </button>
+                </div>
+                <p id="receiverInfo" class="receiver-info"></p>
+                <p id="expiryTimer" class="expiry-timer"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Pay Invoice</h2>
+            <form id="payInvoiceForm">
+                <div class="form-group">
+                    <label for="paymentRequest">Payment Request</label>
+                    <textarea id="paymentRequestInput" required></textarea>
+                </div>
+                <div class="qr-scanner-container">
+                    <button type="button" id="startScan" class="secondary-button">📷 Scan QR Code</button>
+                    <div id="qr-reader" style="display: none;"></div>
+                </div>
+                <button type="submit">Pay Invoice</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/html5-qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

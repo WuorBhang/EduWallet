@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #ff9900;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.secondary-button {
+    background-color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.icon-button {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+#qrcode {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.invoice-info {
+    margin-top: 1rem;
+}
+
+.label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.payment-request-container {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.payment-request {
+    word-break: break-all;
+    font-family: monospace;
+    margin: 0;
+    padding-right: 80px;
+}
+
+#copyButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.expiry-timer {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.receiver-info {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+.qr-scanner-container {
+    margin: 1rem 0;
+}
+
+#qr-reader {
+    margin-top: 1rem;
+    max-width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#qr-reader video {
+    border-radius: 4px;
+}
