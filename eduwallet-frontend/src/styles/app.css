@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Dashboard-specific styles */
+.dashboard-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
